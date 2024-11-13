@@ -1,0 +1,10 @@
+<!-- app/views/flats/_form.html.erb -->
+<%= simple_form_for @flat do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :description %>
+  <%= f.input :number_of_guests, label: "Number of guests" %>
+  <%= f.input :price_per_night, label: "Price per night" %>
+  <%= f.input :picture_url, label: "Picture URL" %> <!-- Champ pour l'URL de l'image -->
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

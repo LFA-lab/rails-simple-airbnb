@@ -1,0 +1,20 @@
+<!-- app/views/flats/_form.html.erb -->
+<%= simple_form_for @flat do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :description %>
+  <%= f.input :price_per_night %>
+  <%= f.input :number_of_guests %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
+<!-- app/views/flats/edit.html.erb -->
+<h1>Edit Flat</h1>
+<%= render 'form' %>
+<%= link_to 'Cancel', flat_path(@flat), class: "btn btn-secondary" %>
+<!-- app/views/flats/new.html.erb et app/views/flats/edit.html.erb -->
+<div class="container mt-4">
+  <h1><%= @flat.new_record? ? 'Add a new Flat' : 'Edit Flat' %></h1>
+  <%= render 'form' %>
+  <%= link_to 'Cancel', flats_path, class: "btn btn-danger" %>
+</div>
+
